@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class studentprofileSeeder extends Seeder
+class examplePatient extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,6 +11,6 @@ class studentprofileSeeder extends Seeder
      */
     public function run()
     {
-        factory('App\studentprofile', 1000)->create();
+        factory('App\ExamplePatient', 5)->create();
     }
 }

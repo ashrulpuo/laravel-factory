@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateFailedJobsTable extends Migration
+class ReportBugs extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,13 @@ class CreateFailedJobsTable extends Migration
      */
     public function up()
     {
-        Schema::create('failed_jobs', function (Blueprint $table) {
+        Schema::create('report_bugs', function(Blueprint $table){
             $table->bigIncrements('id');
-            $table->text('connection');
-            $table->text('queue');
-            $table->longText('payload');
-            $table->longText('exception');
-            $table->timestamp('failed_at')->useCurrent();
+            $table->string('id_report');
+            $table->string('comment_bug');
+            $table->date('datetime');
+            $table->string('id_user');
+            $table->string('file_upload');
         });
     }
 
@@ -30,6 +30,6 @@ class CreateFailedJobsTable extends Migration
      */
     public function down()
     {
-        // Schema::dropIfExists('failed_jobs');
+        //
     }
 }

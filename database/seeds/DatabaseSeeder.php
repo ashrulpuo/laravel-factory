@@ -15,6 +15,10 @@ class DatabaseSeeder extends Seeder
 
         $this->call(studentprofileSeeder::class);
         $this->call(ordersSeeder::class);
+        $this->call(examplePatient::class);
+        $this->call(report::class);
+        $this->call(users::class);
+
 
         //Model::reguard(); // Enable mass assignment
     }

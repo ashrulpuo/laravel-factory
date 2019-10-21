@@ -11,6 +11,6 @@ class ordersSeeder extends Seeder
      */
     public function run()
     {
-        factory('App\orders', 100000)->create();
+        factory('App\orders', 1000)->create();
     }
 }

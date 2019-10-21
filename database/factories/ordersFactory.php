@@ -11,7 +11,7 @@ $factory->define(orders::class, function (Faker $faker) {
         'requiredOrder' => 'yes',
         'shipDate' => $faker->date($format = 'Y-m-d', $max = 'now'),
         'status' => '1',
-        'create_date' => Str::random(10),
+        'create_date' => $faker->date($format = 'Y-m-d', $max = 'now'),
         'update_date' => $faker->date($format = 'Y-m-d', $max = 'now')
     ];
 });
