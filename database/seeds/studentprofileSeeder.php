@@ -11,6 +11,6 @@ class studentprofileSeeder extends Seeder
      */
     public function run()
     {
-        factory('App\studentprofile', 10000)->create();
+        factory('App\studentprofile', 5000)->create();
     }
 }
