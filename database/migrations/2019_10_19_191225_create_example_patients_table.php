@@ -13,7 +13,7 @@ class CreateExamplePatientsTable extends Migration
      */
     public function up()
     {
-        Schema::create('example_patients', function (Blueprint $table) {
+        Schema::create('example_patient', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('fullname');
             $table->date('date_of_admit');

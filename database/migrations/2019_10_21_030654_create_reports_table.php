@@ -13,7 +13,7 @@ class CreateReportsTable extends Migration
      */
     public function up()
     {
-        Schema::create('reports', function(Blueprint $table){
+        Schema::create('report', function(Blueprint $table){
             $table->bigIncrements('id');
             $table->string('title_report');
             $table->string('description_report');
