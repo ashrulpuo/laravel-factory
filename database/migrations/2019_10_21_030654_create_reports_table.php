@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Report extends Migration
+class CreateReportsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class Report extends Migration
      */
     public function up()
     {
-        Schema::create('report', function(Blueprint $table){
+        Schema::create('reports', function(Blueprint $table){
             $table->bigIncrements('id');
             $table->string('title_report');
             $table->string('description_report');

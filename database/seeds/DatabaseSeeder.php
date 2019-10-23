@@ -13,11 +13,12 @@ class DatabaseSeeder extends Seeder
     {
         //Model::unguard(); // Disable mass assignment
 
-        $this->call(studentprofileSeeder::class);
-        $this->call(ordersSeeder::class);
-        $this->call(report::class);
-        $this->call(users::class);
-        $this->call(examplePatient::class);
-        //Model::reguard(); // Enable mass assignment
+        $this->call([
+            StudentprofilesTableSeeder::class,
+            OrdersTableSeeder::class,
+            ReportsTableSeeder::class,
+            UsersTableSeeder::class,
+            ExamplepatientsTableSeeder::class,
+        ]);
     }
 }

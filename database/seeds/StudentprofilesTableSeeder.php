@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class logHistory extends Seeder
+class StudentprofilesTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,6 +11,6 @@ class logHistory extends Seeder
      */
     public function run()
     {
-        //
+        factory('App\studentprofile', 5000)->create();
     }
 }

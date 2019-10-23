@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class reportBug extends Seeder
+class OrdersTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,6 +11,6 @@ class reportBug extends Seeder
      */
     public function run()
     {
-        //
+        factory('App\orders', 1000)->create();
     }
 }

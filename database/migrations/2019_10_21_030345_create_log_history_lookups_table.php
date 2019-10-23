@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class ExamplePatient extends Migration
+class CreateLogHistoryLookupsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,9 @@ class ExamplePatient extends Migration
      */
     public function up()
     {
-        Schema::create('example_patient', function (Blueprint $table) {
+        Schema::create('log_history_lookup', function(Blueprint $table){
             $table->bigIncrements('id');
-            $table->string('fullname');
-            $table->date('date_of_admit');
-            $table->string('ward');
-            $table->date('created_at');
-            $table->date('updated_at');
+            $table->string('activities');
         });
     }
 

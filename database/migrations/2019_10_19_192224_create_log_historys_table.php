@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class LogHistoryLookup extends Migration
+class CreateLogHistorysTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,11 @@ class LogHistoryLookup extends Migration
      */
     public function up()
     {
-        Schema::create('log_history_lookup', function(Blueprint $table){
+        Schema::create('log_history', function(Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('activities');
+            $table->string('id_user');
+            $table->string('type_activities');
+            $table->date('datatime');
         });
     }
 

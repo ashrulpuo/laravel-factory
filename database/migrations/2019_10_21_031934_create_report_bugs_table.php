@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class ReportNote extends Migration
+class CreateReportBugsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,13 @@ class ReportNote extends Migration
      */
     public function up()
     {
-        Schema::create('report_note', function(Blueprint $table){
+        Schema::create('report_bugs', function(Blueprint $table){
             $table->bigIncrements('id');
             $table->string('id_report');
-            $table->string('note');
+            $table->string('comment_bug');
             $table->date('datetime');
+            $table->string('id_user');
+            $table->string('file_upload');
         });
     }
 
